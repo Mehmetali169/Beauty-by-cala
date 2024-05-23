@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty by Cala</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+       @media (max-width: 768px) {
+            .navbar-links {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: white;
+                position: absolute;
+                top: 60px; /* Adjust based on header height */
+                left: 0;
+                z-index: 1000;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-in-out;
+            }
+
+            .navbar-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }   
+        /* Updated styles for the container, items, images, and text */
+        .container {
+            display: flex;
+            justify-content: space-between; /* Align items and text to left and right */
+            align-items: flex-start; /* Align items at the start */
+            padding: 20px;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* Initial position below */
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .container.show {
+            opacity: 1; /* Show when added 'show' class */
+            transform: translateY(0); /* Move to original position */
+        }
+        .item {
+            flex-basis: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            overflow: hidden; /* Hide overflowing content */
+        }
+        .item img {
+            width: 100%; /* Set image width to fill its container */
+            height: auto;
+            margin-bottom: 10px; /* Add space between images */
+            transition: transform 0.5s ease-in-out; /* Add transition for image */
+        }
+        .container:hover .item img {
+            transform: scale(1.1); /* Scale image on hover */
+        }
+        .text {
+            flex-grow: 1; /* Allow text to grow to fill available space */
+            padding-left: 20px; /* Add space between image and text */
+        }
+        .text h2 {
+            margin-top: 0; /* Remove margin for the heading */
+        }
+
+        /* Mirror effect for the second row */
+        .mirror {
+            display: flex;
+            flex-direction: row-reverse; /* Reverse the order of items in the row */
+        }
+        .mirror .text {
+            padding-right: 20px; /* Add space between text and image for mirrored effect */
+            padding-left: 0; /* Reset padding for text */
+            text-align: left; /* Align text to the left */
+        }
+        .mirror .item img {
+            margin-left: 0; /* Reset margin for the image */
+            margin-right: 20px; /* Add space between image and text */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Beauty By Cala</h1>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/beauty_by_cala/"><img src="Images/1298747_instagram_brand_logo_social media_icon.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/profile.php?id=61552843812004&__n=K"><img src="Images/317727_facebook_social media_social_icon.png" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@keratin_expert_mira"><img src="Images/8547041_tiktok_icon.png" alt="TikTok"></a>
+        </div>
+        </div>
+        <nav class="navbar">
+            <button class="menu-toggle">☰</button>
+            <div class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="Keratin.html">*Keratin*</a>
+                <a href="Nails.html">Nails</a>
+                <a href="About us.html">About us</a>
+            </div>
+        </nav> 
+    </header>  
+   
+    <div class="container">
+        <div class="item">
+            <img src="Images/nails/IMG_4351.HEIC" alt="Image 1">
+        </div>
+        <div class="text">
+            <h2>Title 1</h2>
+            <p>Description or details about the first picture. It could be a brief overview or highlights of the content.</p>
+        </div>
+    </div>
+
+    <div class="container mirror"> <!-- Apply mirror effect -->
+        <div class="item">
+            <img src="Images/IMG_6565.jpg" alt="Image 2">
+        </div>
+        <div class="text">
+            <h2>Title 2</h2>
+            <p>Description or details about the second picture. It could be a brief overview or highlights of the content.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="item">
+            <img src="Images/IMG_6565.jpg" alt="Image 3">
+        </div>
+        <div class="text">
+            <h2>Title 3</h2>
+            <p>Description or details about the third picture. It could be a brief overview or highlights of the content.</p>
+        </div>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbarLinks = document.querySelector('.navbar-links');
+
+        menuToggle.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navbarLinks.classList.remove('active');
+            }
+        });
+
+        // Function to show containers with animation when they appear in the viewport
+        function showContainers() {
+            const containers = document.querySelectorAll('.container');
+            containers.forEach(container => {
+                if (isElementInViewport(container)) {
+                    container.classList.add('show');
+                }
+            });
+        }
+
+        // Function to check if an element is in the viewport
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Initial check and event listener for scrolling
+        showContainers();
+        window.addEventListener('scroll', showContainers);
+    </script>
+    <footer>
+        <div class="footer-text">
+            <p class="p-footer">Contact number: 087 341 2936 © 2024 Beauty By Cala</p>
+        </div>
+    </footer>
+</body>
+</html>
