@@ -57,6 +57,11 @@
         margin: 2;
         gap: 3px;
     }
+    .Tiktok_container video:hover,
+    .Keratin-price:hover {
+        transform: scale(1.1); /* Adjust scale factor as needed */
+        transition: transform 0.3s ease-in-out;
+    }
 
     .Keratin-price
     {
@@ -69,8 +74,11 @@
 
     
 }
-
-
+.Tiktok_container video:hover
+{
+    transform: scale(1.6); /* Adjust scale factor as needed */
+        transition: transform 0.3s ease-in-out;
+}
  .Keratin-price:hover {
         transform: scale(1.1); /* Adjust scale factor as needed */
         transition: transform 0.3s ease-in-out;
@@ -91,10 +99,6 @@
     width: calc(10 * 100%); /* Adjust based on the number of videos */
     animation: scrollGallery 25s linear infinite; /* Adjust duration as needed */
 }
-.Keratin-price
-{
-    margin-right: 50px;
-}
 
 .slideshow-video {
     width: 15%; /* Each video takes up 10% of the container width */
@@ -112,7 +116,6 @@
 }
 .Video-title{
 text-align: center;
-margin: 15px;
 }
 .Keratin-price
 {
@@ -120,13 +123,22 @@ margin: 15px;
     width: auto;
     margin-left: 290px;
     border-radius: 10%;
-    margin-bottom: 10px;
+}
+.column-container-keratin
+{
+    float: right;
+    margin-right: 300px;
 }
 .service-details h3 {
     margin-top: 20px;
     margin-left: 29px;
     font-size: 1.5em;
     color: #333;
+}
+.service-details
+{
+    margin: 100px;
+    border-radius: 10px;
 }
 
 .service-details p {
@@ -189,7 +201,7 @@ margin: 15px;
 
     <div class="image-container">
         <video width="flex-direction" height="500" loop muted autoplay>
-           <source src="Video/IMG_6974.mov">
+           <source src="Video/v0f044gc0000clsaek7og65p4633mn40 4 copy.mov">
             Your browser does not support the video tag.
         </video>
         <div class="header-text">
@@ -247,11 +259,11 @@ margin: 15px;
 
     <h2 class="Video-title">Examples of Work</h2>
      <div class="Tiktok_container">
-        <video class="slideshow-video" controls src="Video/v17044gh0000co39ma7og65ggl5830qg.MP4"></video>
-        <video class="slideshow-video" controls src="Video/v0f025gc0000co4qnafog65otj6qmqug.MP4"></video>
-        <video class="slideshow-video" controls src="Video/v0f025gc0000co040rvog65i3qd5te7g.MP4"></video>
-        <video class="slideshow-video" controls src="Video/v17044gh0000cm67av7og65vcas9n7k0.MP4"></video>
-        <video class="slideshow-video" controls src="Video/v17044gh0000co8if7fog65om4r0f4bg.MP4"></video>
+        <video class="slideshow-video" loop muted autoplay src="Video/v17044gh0000co39ma7og65ggl5830qg.MP4"></video>
+        <video class="slideshow-video" loop muted autoplay src="Video/v0f025gc0000co4qnafog65otj6qmqug.MP4"></video>
+        <video class="slideshow-video" loop muted autoplay src="Video/v0f025gc0000co040rvog65i3qd5te7g.MP4"></video>
+        <video class="slideshow-video" loop muted autoplay src="Video/v17044gh0000cm67av7og65vcas9n7k0.MP4"></video>
+        <video class="slideshow-video" loop muted autoplay src="Video/v17044gh0000co8if7fog65om4r0f4bg.MP4"></video>
      </div>
      <div class="service-details">
         <h3>More Detailed Benefits :</h3>
