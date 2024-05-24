@@ -39,6 +39,8 @@
             opacity: 0; /* Initially hidden */
             transform: translateY(20px); /* Initial position below */
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            width: 100%; /* Full width */
+            margin: 20px auto; /* Centered and some spacing between containers */
         }
         .container.show {
             opacity: 1; /* Show when added 'show' class */
@@ -65,21 +67,6 @@
         .text h2 {
             margin-top: 0; /* Remove margin for the heading */
         }
-
-        /* Mirror effect for the second row */
-        .mirror {
-            display: flex;
-            flex-direction: row-reverse; /* Reverse the order of items in the row */
-        }
-        .mirror .text {
-            padding-right: 20px; /* Add space between text and image for mirrored effect */
-            padding-left: 0; /* Reset padding for text */
-            text-align: left; /* Align text to the left */
-        }
-        .mirror .item img {
-            margin-left: 0; /* Reset margin for the image */
-            margin-right: 20px; /* Add space between image and text */
-        }
     </style>
 </head>
 <body>
@@ -100,35 +87,106 @@
                 <a href="About us.html">About us</a>
             </div>
         </nav> 
-    </header>  
-   
+    </header> 
     <div class="container">
         <div class="item">
             <img src="Images/nails/IMG_4351.HEIC" alt="Image 1">
         </div>
         <div class="text">
-            <h2>Title 1</h2>
-            <p>Description or details about the first picture. It could be a brief overview or highlights of the content.</p>
+            <h2>Our Team</h2>
+            <p>Nestled in the heart of Sligo, at 2 Harmony Hill, lies a 
+                sanctuary of beauty and self-care, where the talents of three 
+                remarkable women converge to create magic. Ilda, Adina, and 
+                Adelajda are the creative forces behind this oasis, each bringing 
+                their own expertise to the table. Ilda, with her keen eye for
+                 detail, transforms nails into miniature works of art, while
+                  Adina, a seasoned veteran of the nail industry, crafts flawless
+                   manicures and pedicures with precision. Meanwhile, Adelajda, 
+                   the maestro of keratin treatments, works her magic, leaving 
+                   clients with hair that exudes health and vitality. Together, 
+                   in their cozy salon in Sligo, these three women create an 
+                   unparalleled experience for their clients. Amidst the serene 
+                   ambiance of Harmony Hill, beauty isn't just a service—it's
+                    an art form, meticulously curated by the hands and hearts 
+                    of Ilda, Adina, and Adelajda.</p>
         </div>
-    </div>
-
-    <div class="container mirror"> <!-- Apply mirror effect -->
+    </div>   
+    <div class="container">
         <div class="item">
-            <img src="Images/IMG_6565.jpg" alt="Image 2">
+            <img src="Images/nails/IMG_4351.HEIC" alt="Image 1">
         </div>
         <div class="text">
-            <h2>Title 2</h2>
-            <p>Description or details about the second picture. It could be a brief overview or highlights of the content.</p>
+            <h2>Our Keratin Expert </h2>
+            <p>Adelajda is not just a name; it's a symbol of excellence in
+                the realm of keratin hair treatment. With a deft touch and 
+                a keen eye for detail, Adelajda transforms locks into cascading 
+                strands of silk. Her mastery of the craft is unmatched, her 
+                reputation preceding her like a gentle breeze announcing her 
+                arrival. Each strand she touches becomes a testament to her 
+                expertise, as she weaves magic into every follicle, leaving 
+                behind a trail of radiant, lustrous hair. Adelajda doesn't 
+                just tame frizz; she elevates it into a work of art, turning 
+                ordinary hair into extraordinary mane. In her capable hands,
+                 keratin treatment transcends mere beauty routine; it becomes
+                  a ritual of self-care and indulgence, leaving clients not 
+                  just with transformed hair, but with renewed confidence 
+                  and a spring in their step. Adelajda, the artisan of keratin,
+                   the maestro of transformation, turning strands into stories 
+                   of beauty and grace</p>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="item">
+            <img src="Images/IMG_5905.HEIC" alt="Image 2">
+        </div>
+        <div class="text">
+            <h2>Our Nail Experts</h2>
+            <p>Adina, a seasoned virtuoso in the art of nail design, has been 
+                crafting stunning manicures and pedicures for a remarkable
+                 span of time. With years of experience under her belt, she
+                  has honed her skills to perfection, earning a reputation as 
+                  a true master in her field. Each stroke of her brush is 
+                  imbued with a finesse that only comes from years of dedicated
+                   practice and a genuine love for her craft. Adina's loyal 
+                   clientele speaks volumes about her talent and professionalism,
+                    with clients returning time and again to experience her 
+                    impeccable nail services. Beyond her technical expertise,
+                     Adina possesses a warm and welcoming demeanor, creating 
+                     an atmosphere of comfort and trust in her salon. Her 
+                     passion for nail artistry is palpable, and her commitment
+                      to exceeding client expectations is unwavering. In the
+                       ever-evolving world of beauty, Adina stands as a beacon 
+                       of excellence, her expertise shining brightly as a testament
+                        to her enduring dedication to the art of nail care.</p>
         </div>
     </div>
+    
 
     <div class="container">
         <div class="item">
             <img src="Images/IMG_6565.jpg" alt="Image 3">
         </div>
         <div class="text">
-            <h2>Title 3</h2>
-            <p>Description or details about the third picture. It could be a brief overview or highlights of the content.</p>
+            <h2>Our Nail Expert</h2>
+            <p>Meet Ilda, a rising star in the world of nail artistry.
+                 With an innate passion for creativity and precision,
+                  she has embarked on an exciting journey as an expert
+                   nail technician. Armed with her keen eye for detail 
+                   and steady hands, Ilda is already making waves in 
+                   the industry, transforming ordinary nails into 
+                   stunning works of art. Though just starting out, 
+                   her dedication to perfecting her craft shines
+                    through in every meticulous stroke of polish 
+                    and every intricate design she brings to life.
+                     Clients are drawn not only to her exceptional 
+                     skills but also to her warm demeanor and 
+                     commitment to customer satisfaction. As Ilda 
+                     continues to hone her talents and build her
+                      clientele, she is poised to become a sought-after
+                       name in the realm of nail care, leaving a trail 
+                       of beautifully manicured fingers in her wake.</p>
         </div>
     </div>
 

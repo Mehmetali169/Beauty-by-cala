@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="stylesheet.css">
     <style>
         /* Base styles */
-
-       
         @media (max-width: 768px) {
             .navbar-links {
                 display: flex;
@@ -24,20 +22,66 @@
                 overflow: hidden;
                 transition: max-height 0.5s ease-in-out;
             }
-
             .navbar-links.active {
                 display: flex;
             }
-
             .menu-toggle {
                 display: block;
             }
-        }   
+        }
+
+        /* New styles for image and text layout */
+        .video-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px; /* Adjust as needed */
+        }
+
+        .video-container,
+        .image-with-text-container {
+            flex: 1;
+            text-align: center;
+            max-width: 40%; /* Adjust size as needed */
+            padding: 10px; /* Add some padding for gaps */
+            transition: transform 0.3s ease-in-out; /* Add animation */
+        }
+        .video-container video,
+        .image-with-text-container img {
+            width: 100%; /* Adjust size as needed */
+            border-radius: 20px; /* Add rounded corners */
+            transition: transform 0.3s ease-in-out; /* Add animation */
+        }
+
+        .video-container video
+        .text-overlay {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Add background color */
+            border-radius: 10px; /* Add rounded corners */
+        }
+
+        @media (max-width: 768px) {
+            .video-image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .video-container,
+            .image-with-text-container {
+                max-width: 80%; /* Adjust size as needed */
+                margin-bottom: 20px; /* Add margin for gaps */
+            }
+        }
+
+        /* Animation styles */
+        .video-container:hover video,
+        .image-with-text-container:hover img {
+            transform: scale(1.1); /* Add a slight scale effect on hover */
+        }
     </style>
 </head>
 <body>
     <header class="header">
-        
         <h1>Beauty By Cala</h1>
         <div class="social-icons">
             <a href="https://www.instagram.com/beauty_by_cala/"><img src="Images/1298747_instagram_brand_logo_social media_icon.png" alt="Instagram"></a>
@@ -55,7 +99,7 @@
         </nav>
     </header>
     <div class="image-container">
-        <img src="Images/nails/IMG_5905.HEIC" alt="img">
+        <img src="Images/IMG_5905.HEIC" alt="img">
         <div class="header-text">
             <span class="line1">Bring Fashion To</span><br>
             <span class="line2">Your Finger Tips</span>
@@ -78,6 +122,22 @@
             </p>
         </div>
     </div>
+
+    <!-- New section for video, picture, and text -->
+    <div class="video-image-container">
+        <div class="video-container">
+            <h2>Examples</h2>
+            <video width="100%" height="auto" controls> 
+                <source src="Video/0523.mp4"> 
+            </video>
+        </div>
+
+        <div class="image-with-text-container">
+            <h2>Prices</h2>
+            <img src="Images/703e52a9-0da8-41b6-b331-c557d2b361cf 2.jpg" alt="Nail prices">   
+        </div>
+    </div>
+
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navbarLinks = document.querySelector('.navbar-links');
@@ -92,29 +152,7 @@
             }
         });
     </script>
-    <div class="header-slider">
-        <h1>Examples of Work</h1>
-    </div>
-    <div class="image-gallery">
-        <div class="gallery-container">
-            <img src="Images/nails/48286ECD-FCDF-4011-8400-FF4723AD384D.JPG" alt="Image 1">
-            <img src="Images/nails/761A14E3-4A53-4D8D-8416-DD3DF6F7A55D.JPG" alt="Image 2">
-            <img src="Images/nails/BCB29127-6E28-4A99-A0C6-C25BA65B43E9.JPG" alt="Image 3">
-            <img src="Images/nails/C185F41B-B7E3-46B4-8D2D-85FA6AD0C82F.JPG" alt="Image 4">
-            <img src="Images/nails/F0300C64-8132-4104-9DEB-A116451FD1EB.JPG" alt="Image 5">
-            <img src="Images/nails/F5F9712B-E825-44B3-9B3C-6F03C123272A.JPG" alt="Image 6">
-            <img src="Images/nails/IMG_4351.HEIC" alt="Image 7">
-            <img src="Images/nails/IMG_4389.HEIC" alt="Image 8">
-            <img src="Images/nails/IMG_5158.HEIC" alt="Image 9">
-            <img src="Images/nails/IMG_5230.HEIC" alt="Image 10">
-            <img src="Images/nails/IMG_5578.HEIC" alt="Image 11">
-            <img src="Images/nails/IMG_5631.HEIC" alt="Image 12">
-            <img src="Images/nails/IMG_5716.HEIC" alt="Image 13">
-            <img src="Images/nails/IMG_5905.HEIC" alt="Image 14">
-            <img src="Images/nails/IMG_6091.HEIC" alt="Image 15">
-            <!-- Add more images as needed -->
-        </div>
-    </div>
+
     <footer>
         <div class="footer-text">
             <p class="p-footer">Contact number: 087 341 2936 © 2024 Beauty By Cala</p>

@@ -6,146 +6,136 @@
     <title>Beauty by Cala</title>
     <link rel="stylesheet" href="stylesheet.css">
     <style>
-         @media (max-width: 768px) {
-    .navbar-links {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: white;
-        position: absolute;
-        top: 60px; /* Adjust based on header height */
-        left: 0;
-        z-index: 1000;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-in-out;
-    }
+        @media (max-width: 768px) {
+            .navbar-links {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: white;
+                position: absolute;
+                top: 60px; /* Adjust based on header height */
+                left: 0;
+                z-index: 1000;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-in-out;
+            }
 
-    .navbar-links.active {
-        display: flex;
-    }
+            .navbar-links.active {
+                display: flex;
+            }
 
-    .menu-toggle {
-        display: block;
-    }
-    .image-container video {
-        width: 100%;
-        height: auto;
-        
-        
-    }
-    .line2
-    {
-        margin: -1px;
-    }
-    
- 
+            .menu-toggle {
+                display: block;
+            }
 
+            .image-container video {
+                width: 100%;
+                height: auto;
+            }
 
+            .line2 {
+                margin: -1px;
+            }
 
-}
-@media (max-width: 768px) {
-    .Tiktok_container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-left: 0;
-        margin: 2;
-        gap: 3px;
-    }
+            .Tiktok_container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: 0;
+                margin: 2;
+                gap: 3px;
+            }
 
-    .Keratin-price
-    {
-        height: auto;
-        
-        float: right;
-        margin-right: 20px;
-    } 
-    .address-text {
-  font-size: 12px;
- 
- }  
+            .Keratin-price {
+                height: auto;
+                float: right;
+                margin-right: 20px;
+            }
 
+            .address-text {
+                font-size: 12px;
+            }
+        }
 
-    
-}
+        @media (min-width: 769px) {
+            .image-container video {
+                width: 100%;
+                height: auto;
+            }
+        }
 
+        .Keratin-price:hover {
+            transform: scale(1.1); /* Adjust scale factor as needed */
+            transition: transform 0.3s ease-in-out;
+        }
 
- .Keratin-price:hover {
-        transform: scale(1.1); /* Adjust scale factor as needed */
-        transition: transform 0.3s ease-in-out;
- }
+        .image-gallery {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            height: 300px; /* Set the height for the container */
+            display: flex;
+            justify-content: center;
+        }
 
+        .gallery-container {
+            display: flex;
+            width: calc(10 * 100%); /* Adjust based on the number of videos */
+            animation: scrollGallery 25s linear infinite; /* Adjust duration as needed */
+        }
 
-.image-gallery {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    height: 300px; /* Set the height for the container */
-    display: flex;
-    justify-content: center;
-}
+        .slideshow-video {
+            width: 15%; /* Each video takes up 10% of the container width */
+            height: 120%; /* Ensures the video height fits within the container */
+            flex: 0 0 10%; /* Ensure each video takes up 10% of the flex container */
+        }
 
-.gallery-container {
-    display: flex;
-    width: calc(10 * 100%); /* Adjust based on the number of videos */
-    animation: scrollGallery 25s linear infinite; /* Adjust duration as needed */
-}
+        @keyframes scrollGallery {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-100% - 10px)); /* Adjust spacing */
+            }
+        }
+        .Keratin-price {
+            height: 400px;
+            width: auto;
+            margin-left: 290px;
+            border-radius: 10%;
+        }
 
-.slideshow-video {
-    width: 15%; /* Each video takes up 10% of the container width */
-    height: 120%; /* Ensures the video height fits within the container */
-    flex: 0 0 10%; /* Ensure each video takes up 10% of the flex container */
-}
+        .service-details h3 {
+            margin-top: 20px;
+            margin-left: 15px;
+            font-size: 1.5em;
+            color: #333;
+        }
 
-@keyframes scrollGallery {
-  0% {
-      transform: translateX(0);
-  }
-  100% {
-      transform: translateX(calc(-100% - 10px)); /* Adjust spacing */
-  }
-}
-.Video-title{
-text-align: center;
-}
-.Keratin-price
-{
-    height: 400px;
-    width: auto;
-    margin-left: 290px;
-    border-radius: 10%;
-}
-.service-details h3 {
-    margin-top: 20px;
-    margin-left: 29px;
-    font-size: 1.5em;
-    color: #333;
-}
+        .service-details p {
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #555;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
 
-.service-details p {
-    margin-bottom: 10px;
-    font-size: 1em;
-    color: #555;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeInAnimation ease 3s;
+            animation-fill-mode: forwards;
+        }
 
-/* Fade-in animation */
-.fade-in {
-    opacity: 0;
-    animation: fadeInAnimation ease 3s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -183,8 +173,9 @@ text-align: center;
     </script>
 
     <div class="image-container">
-        <video width="flex-direction" height="500" loop muted autoplay>
-           <source src="Video/IMG_6974.mov">
+        <video width="100%" height="auto" loop muted autoplay>
+            <source src="Video/IMG_6974 2.mov" media="(min-width: 769px)">
+            <source src="Video/IMG_6974.mov" media="(max-width: 768px)">
             Your browser does not support the video tag.
         </video>
         <div class="header-text">
@@ -195,35 +186,6 @@ text-align: center;
                 <button class="book-now-button"><a href="https://www.fresha.com/for-business?utm_source=google&utm_medium=paid&utm_campaign=AVE_UK_Search_Brand_Mon_&utm_term=Search_Brand_Fresha&utm_content=fresha&cq_src=google_ads&cq_cmp=16562274175&cq_term=fresha&cq_plac=&cq_net=g&cq_plt=gp&gad_source=1&gclid=Cj0KCQjw6auyBhDzARIsALIo6v8aJQb2S7svRtVdT7Kyxp-q6Xf-_G6pqUpTH-qVP5GS1RxvJfhhq5caAvJlEALw_wcB">Book Now</a></button>
             </div>
         </div>
-    </div>
-
-    <div class="services-heading">Benefits of Keratin</div>
-
-    <div class="column-container">
-        <div class="column">
-            <h3>Frizz-Free Hair with Brazilian Nano Keratin</h3>
-            <p>Smooth away frizz and flyaways effortlessly for polished, sleek tresses.</p>
-        </div>
-        <div class="column">
-            <h3>Effortless Styling with Brazilian Nano Keratin</h3>
-            <p>Manageable hair means quick, beautiful styles with less hassle.</p>
-        </div>
-        <div class="column">
-            <h3>Lasting Brilliance</h3>
-            <p>Brazilian Nano Keratin keeps your hair stunning for 8 months, perfect for special occasions or a lasting transformation.</p>
-        </div>
-        <div class="column">
-            <h3>Customized Care for All Hair Types</h3>
-            <p>Versatile and adaptable, this treatment caters to straight, wavy, or curly hair for tailored results.</p>
-        </div>
-        <div class="column">
-            <h3>Nourishing Strength with Keratin</h3>
-            <p>Infused with natural keratin, this treatment repairs and strengthens hair from within, leaving it healthy and gorgeous.</p>
-        </div>
-        <div class="column">
-            <h3>Low-Maintenance Convenience</h3>
-            <p>Keep your hair routine simple with minimal upkeep, preserving your hair's radiance effortlessly.</p>
-        </div>
     </div> 
     <div class="column-container">
         <img class="Keratin-price" src="Images/cd2ab88b-6093-4252-a2f6-f21989495d53 3.jpg">
@@ -233,21 +195,24 @@ text-align: center;
                 Kerartin Kerartin Kerartin Kerartin Kerartin Kerartin 
                 ```  Kerartin Kerartin Kerartin Kerartin Kerartin Kerartin
                  Kerartin Kerartin Kerartin Kerartin Kerartin Kerartin 
-                 Kerartin Kerartin Kerartin Kerartin Kerartin Kerartin 
                  Kerartin Kerartin Kerartin Kerartin Kerartin Kerartin
-                 Kerartin Kerartin Kerartin Kerartin Kerartin Kerartin
-                 Kerartin Kerartin Kerartin Kerartin</p>
+                  Kerartin Kerartin Kerartin Kerartin Kerartin Kerartin
+            </p>
         </div>
     </div>
 
     <h2 class="Video-title">Examples of Work</h2>
-     <div class="Tiktok_container">
+    <div class="Tiktok_container">
         <video class="slideshow-video" controls src="Video/v17044gh0000co39ma7og65ggl5830qg.MP4"></video>
         <video class="slideshow-video" controls src="Video/v0f025gc0000co4qnafog65otj6qmqug.MP4"></video>
         <video class="slideshow-video" controls src="Video/v0f025gc0000co040rvog65i3qd5te7g.MP4"></video>
         <video class="slideshow-video" controls src="Video/v17044gh0000cm67av7og65vcas9n7k0.MP4"></video>
         <video class="slideshow-video" controls src="Video/v17044gh0000co8if7fog65om4r0f4bg.MP4"></video>
-     </div>
+    </div>
+    <div class="tiktok-text">
+        <p>Follow us on TikTok for more videos and updates! <a href="https://www.tiktok.com/@keratin_expert_mira">CLICK ME FOR MORE EXAMPLES
+    </div>
+    
      <div class="service-details">
         <h3>More Detailed Benefits :</h3>
         <p>1. Taming Unruly Tresses with Frizz Control<p>

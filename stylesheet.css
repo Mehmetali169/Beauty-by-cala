@@ -9,10 +9,21 @@ body {
   margin: 0;
   padding: 0;
 }
+h2
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .social-icons a {
   margin-left: 10px;
   display: inline-block;
 }
+.tiktok-text {
+  text-align: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+  color: #555; /* Adjust the color as needed */
+  font-size: 1em; /* Adjust the font size as needed */
+}
+
 .social-icons img {
   height: 30px;
   transition: transform 0.3s ease; 
@@ -127,6 +138,10 @@ footer {
   font-weight: normal; 
   margin-top: -2px;
 }
+.Video-title {
+  text-align: center;
+  margin: 15px;
+}
 .image-container {
   position: relative;
   text-align: center;
@@ -176,8 +191,8 @@ footer {
 .services-heading {
   text-align: center;
   font-size: 24px;
-  font-weight: bold;
   margin: 20px 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .book-now-button {
   background-color: transparent; 
